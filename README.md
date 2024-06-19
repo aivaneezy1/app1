@@ -21,5 +21,5 @@ This project is a forum website where users can create posts, edit their posts, 
 - **Backend and Database**: MongoDB (for data storage)
 - **Deployment**: Vercel
 
-Website Url : https://app1-phi-liard.vercel.app/ (P.S) i dont know the image is not working. i litreally tried everything to make it work but nothing :(.
+Website Url : https://app1-phi-liard.vercel.app/ (P.S) i dont know the why image is not working. i litreally tried everything to make it work but nothing :(.
 
