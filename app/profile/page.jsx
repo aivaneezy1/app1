@@ -9,8 +9,8 @@ const Profilepage = () => {
   const [showAlert, setShowAlert] = useState(false);
   const router = useRouter();
   const queryParams = useSearchParams();
+
   useEffect(() => {
-    
     const edited = queryParams.get("edited");
 
     if (edited) {
@@ -19,24 +19,22 @@ const Profilepage = () => {
       router.replace("/profile", undefined, { shallow: true });
     }
 
-      const timeout = setTimeout(() => {
-      setShowAlert(false);  
-      
+    const timeout = setTimeout(() => {
+      setShowAlert(false);
     }, 3000);
 
     return () => clearTimeout(timeout);
-  }, [router]);
+  }, [router, queryParams]);
 
   return (
-    <div className="mt-10 ml-5">
-  
-      {showAlert && <AlertEdit />}
-      <h2 className="head_text text-left text-secondary">My Profile</h2>
-      <h2 className="text-gray-500 text-left mt-5">View your own post.</h2>
-        <Suspense>
-      <HandleProfileData/>
-      </Suspense>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="mt-10 ml-5">
+        {showAlert && <AlertEdit />}
+        <h2 className="head_text text-left text-secondary">My Profile</h2>
+        <h2 className="text-gray-500 text-left mt-5">View your own post.</h2>
+        <HandleProfileData />
+      </div>
+    </Suspense>
   );
 };
 
