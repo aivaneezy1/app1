@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Profile from "../Components/Profile";
 import AlertEdit from "../utils/AlertEdit";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -29,10 +29,13 @@ const Profilepage = () => {
 
   return (
     <div className="mt-10 ml-5">
+    <Suspense>
       {showAlert && <AlertEdit />}
       <h2 className="head_text text-left text-secondary">My Profile</h2>
       <h2 className="text-gray-500 text-left mt-5">View your own post.</h2>
+      
       <HandleProfileData/>
+      </Suspense>
     </div>
   );
 };
