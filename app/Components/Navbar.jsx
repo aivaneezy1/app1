@@ -19,7 +19,7 @@ const Navbar = () => {
             height={50}
           />
           <h2 className="text-3xl font-semibold hidden sm:block">
-            AI-generator
+            Random
           </h2>
         </Link>
       </div>

@@ -13,10 +13,10 @@ export default function Home() {
         <h2 className="head_text font-bold">Discover & Share</h2>
         <br />
         <h2 className="text-4xl text-yellow-500 font-bold">
-          AI-POWERED prompts
+          Your thoughts and others
         </h2>
         <h2 className="text-2xl text-gray-500 mt-2">
-          Learning the real power of AI for the modern world to discover
+           Exploring the depth of human thoughts.
         </h2>
       </div>
       {/*Search bar */}
