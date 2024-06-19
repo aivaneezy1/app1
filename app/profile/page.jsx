@@ -29,11 +29,11 @@ const Profilepage = () => {
 
   return (
     <div className="mt-10 ml-5">
-    <Suspense>
+  
       {showAlert && <AlertEdit />}
       <h2 className="head_text text-left text-secondary">My Profile</h2>
       <h2 className="text-gray-500 text-left mt-5">View your own post.</h2>
-      
+        <Suspense>
       <HandleProfileData/>
       </Suspense>
     </div>
